@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,8 +18,9 @@ namespace Hangman
         private int m_CurrentLabelLetter = 1;
         private string m_WordToGuess;
         private int m_CountError = 0;
+        private int m_CountCorrect = 0;
 
-        private Image[]  m_Images = new Image[6]; // ????
+        private Image[]  m_Images = new Image[6];
 
         public void SetImagesArray()
         {
@@ -52,8 +54,16 @@ namespace Hangman
                 {
                     for (int i = 0; i < m_WordToGuess.Length; i++)
                     {
-                        if (m_WordToGuess[i].ToString() == buttonText)
+                        if (m_WordToGuess[i].ToString() == buttonText) { 
                             gb_Text.Controls["lbl_P" + (i + 1)].Text = buttonText;
+                            m_CountCorrect += 1;
+                            if (m_CountCorrect == (m_WordToGuess.Length - RemoveUnderscores(m_WordToGuess))) // RONI LOOK THIS COOL :)
+                            {
+                                this.Hide();
+                                Form f2 = new Form3();
+                                f2.Show();
+                            }
+                        }
                     }
                 }
 
@@ -61,9 +71,29 @@ namespace Hangman
                 {
                     m_CountError++;
                     pictureBox1.Image = m_Images[m_CountError - 1];
+                    if (m_CountError >= m_Images.Length)
+                    {
+                        this.Hide();
+                        Form f1 = new Form2();
+                        f1.Show();
+
+                    }
                 }
                 (sender as Button).Enabled = false;
             }
+        }
+
+        private int RemoveUnderscores (string s)
+        {
+            int count = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == '_')
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
     private void btn_Backspace_Click(object sender, EventArgs e)
@@ -77,7 +107,7 @@ namespace Hangman
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             Label curLabel;
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 curLabel = gb_Text.Controls["lbl_P" + i] as Label;
                 m_WordToGuess += curLabel.Text;
@@ -86,11 +116,6 @@ namespace Hangman
 
             btn_Backspace.Visible = false;
             btn_Submit.Visible = false;
-
-            if (m_CurrentLabelLetter == 6)
-                btn_Submit.Enabled = true;
-
-            btn_Backspace.Enabled = false;
 
             m_CurrentLabelLetter = 1;
             m_IsFirstPlayer = false;

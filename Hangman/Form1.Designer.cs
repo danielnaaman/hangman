@@ -47,6 +47,12 @@
             this.lbl_P3 = new System.Windows.Forms.Label();
             this.lbl_P2 = new System.Windows.Forms.Label();
             this.lbl_P1 = new System.Windows.Forms.Label();
+            this.btn_H = new System.Windows.Forms.Button();
+            this.btn_I = new System.Windows.Forms.Button();
+            this.btn_K = new System.Windows.Forms.Button();
+            this.btn_L = new System.Windows.Forms.Button();
+            this.btn_J = new System.Windows.Forms.Button();
+            this.btn_G = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gb_Keyboard.SuspendLayout();
             this.gb_Text.SuspendLayout();
@@ -65,6 +71,12 @@
             // 
             // gb_Keyboard
             // 
+            this.gb_Keyboard.Controls.Add(this.btn_H);
+            this.gb_Keyboard.Controls.Add(this.btn_I);
+            this.gb_Keyboard.Controls.Add(this.btn_K);
+            this.gb_Keyboard.Controls.Add(this.btn_L);
+            this.gb_Keyboard.Controls.Add(this.btn_J);
+            this.gb_Keyboard.Controls.Add(this.btn_G);
             this.gb_Keyboard.Controls.Add(this.btn_Submit);
             this.gb_Keyboard.Controls.Add(this.btn_Backspace);
             this.gb_Keyboard.Controls.Add(this.btn_B);
@@ -77,7 +89,7 @@
             this.gb_Keyboard.Margin = new System.Windows.Forms.Padding(2);
             this.gb_Keyboard.Name = "gb_Keyboard";
             this.gb_Keyboard.Padding = new System.Windows.Forms.Padding(2);
-            this.gb_Keyboard.Size = new System.Drawing.Size(356, 80);
+            this.gb_Keyboard.Size = new System.Drawing.Size(356, 126);
             this.gb_Keyboard.TabIndex = 1;
             this.gb_Keyboard.TabStop = false;
             this.gb_Keyboard.Text = "Keyboard";
@@ -89,7 +101,7 @@
             this.btn_Submit.Location = new System.Drawing.Point(319, 23);
             this.btn_Submit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Submit.Name = "btn_Submit";
-            this.btn_Submit.Size = new System.Drawing.Size(29, 41);
+            this.btn_Submit.Size = new System.Drawing.Size(29, 86);
             this.btn_Submit.TabIndex = 7;
             this.btn_Submit.Text = "V";
             this.btn_Submit.UseVisualStyleBackColor = true;
@@ -102,7 +114,7 @@
             this.btn_Backspace.Location = new System.Drawing.Point(288, 23);
             this.btn_Backspace.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Backspace.Name = "btn_Backspace";
-            this.btn_Backspace.Size = new System.Drawing.Size(29, 41);
+            this.btn_Backspace.Size = new System.Drawing.Size(29, 86);
             this.btn_Backspace.TabIndex = 6;
             this.btn_Backspace.Text = "X";
             this.btn_Backspace.UseVisualStyleBackColor = true;
@@ -284,6 +296,78 @@
             this.lbl_P1.TabIndex = 4;
             this.lbl_P1.Text = "_";
             // 
+            // btn_H
+            // 
+            this.btn_H.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_H.Location = new System.Drawing.Point(56, 68);
+            this.btn_H.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_H.Name = "btn_H";
+            this.btn_H.Size = new System.Drawing.Size(44, 41);
+            this.btn_H.TabIndex = 13;
+            this.btn_H.Text = "H";
+            this.btn_H.UseVisualStyleBackColor = true;
+            this.btn_H.Click += new System.EventHandler(this.btn_Letter_Click);
+            // 
+            // btn_I
+            // 
+            this.btn_I.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_I.Location = new System.Drawing.Point(103, 68);
+            this.btn_I.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_I.Name = "btn_I";
+            this.btn_I.Size = new System.Drawing.Size(44, 41);
+            this.btn_I.TabIndex = 12;
+            this.btn_I.Text = "I";
+            this.btn_I.UseVisualStyleBackColor = true;
+            this.btn_I.Click += new System.EventHandler(this.btn_Letter_Click);
+            // 
+            // btn_K
+            // 
+            this.btn_K.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_K.Location = new System.Drawing.Point(196, 68);
+            this.btn_K.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_K.Name = "btn_K";
+            this.btn_K.Size = new System.Drawing.Size(44, 41);
+            this.btn_K.TabIndex = 11;
+            this.btn_K.Text = "K";
+            this.btn_K.UseVisualStyleBackColor = true;
+            this.btn_K.Click += new System.EventHandler(this.btn_Letter_Click);
+            // 
+            // btn_L
+            // 
+            this.btn_L.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_L.Location = new System.Drawing.Point(242, 68);
+            this.btn_L.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_L.Name = "btn_L";
+            this.btn_L.Size = new System.Drawing.Size(44, 41);
+            this.btn_L.TabIndex = 10;
+            this.btn_L.Text = "L";
+            this.btn_L.UseVisualStyleBackColor = true;
+            this.btn_L.Click += new System.EventHandler(this.btn_Letter_Click);
+            // 
+            // btn_J
+            // 
+            this.btn_J.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_J.Location = new System.Drawing.Point(150, 68);
+            this.btn_J.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_J.Name = "btn_J";
+            this.btn_J.Size = new System.Drawing.Size(44, 41);
+            this.btn_J.TabIndex = 9;
+            this.btn_J.Text = "J";
+            this.btn_J.UseVisualStyleBackColor = true;
+            this.btn_J.Click += new System.EventHandler(this.btn_Letter_Click);
+            // 
+            // btn_G
+            // 
+            this.btn_G.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_G.Location = new System.Drawing.Point(8, 68);
+            this.btn_G.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_G.Name = "btn_G";
+            this.btn_G.Size = new System.Drawing.Size(44, 41);
+            this.btn_G.TabIndex = 8;
+            this.btn_G.Text = "G";
+            this.btn_G.UseVisualStyleBackColor = true;
+            this.btn_G.Click += new System.EventHandler(this.btn_Letter_Click);
+            // 
             // frm_Hangman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +411,12 @@
         private System.Windows.Forms.Label lbl_P2;
         private System.Windows.Forms.Label lbl_P1;
         private System.Windows.Forms.Button btn_Submit;
+        private System.Windows.Forms.Button btn_H;
+        private System.Windows.Forms.Button btn_I;
+        private System.Windows.Forms.Button btn_K;
+        private System.Windows.Forms.Button btn_L;
+        private System.Windows.Forms.Button btn_J;
+        private System.Windows.Forms.Button btn_G;
     }
 }
 
